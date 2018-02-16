@@ -13,7 +13,7 @@ open Ast
 %%
 line:
 expr EOL { $1 }
-;
+    ; 
 expr:
 NUM { ASTNum($1) }
 | IDENT { ASTId($1) }
