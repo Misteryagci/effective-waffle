@@ -13,10 +13,12 @@ open Ast
 %%
 line:
 expr EOL { $1 }
-;
+    ; 
 expr:
 NUM { ASTNum($1) }
 | IDENT { ASTId($1) }
+| TRUE  { ASTBool(Ast.True) }
+| FALSE  { ASTBool(Ast.False) }
 | LPAR PLUS expr expr RPAR { ASTPrim(Ast.Add, $3, $4) }
 | LPAR MINUS expr expr RPAR { ASTPrim(Ast.Sub, $3, $4) }
 | LPAR TIMES expr expr RPAR { ASTPrim(Ast.Mul, $3, $4) }

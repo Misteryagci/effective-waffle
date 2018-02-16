@@ -14,7 +14,7 @@ rule token = parse
 | "CONST"  { CONSTANT }
 | "FUN"  { FUNCTION }
 | "REC"  { RECURSION }
-| "ECHO"  { ECHO }
+| "echo"  { ECHO }
 | "bool"  { BOOL }
 | "int"  { INT }
 | "true"  { TRUE }

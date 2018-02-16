@@ -17,6 +17,9 @@ let rec print_prolog e =
     print_prolog e1;
     Printf.printf")"
   )
+  | ASTBool(booleen) -> (
+    Printf.printf"%s" (string_of_booleen booleen);
+  )
 let _ =
 try
 let lexbuf = Lexing.from_channel stdin in
